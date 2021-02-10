@@ -1,3 +1,6 @@
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class FizzBuzz {
     private static final String FIZZ = "Fizz";
     private static final String BUZZ = "Buzz";
@@ -12,5 +15,9 @@ public class FizzBuzz {
         } else {
             return number.toString();
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(IntStream.range(1, 100).mapToObj(FizzBuzz::convertFizzBuzz).collect(Collectors.joining(" ")));
     }
 }

@@ -1,3 +1,6 @@
 public class FizzBuzz {
-    //TODO implement
+    public static String convertFizzBuzz(Integer number) {
+        //TODO implement
+        return "o";
+    }
 }

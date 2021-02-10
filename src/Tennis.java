@@ -1,5 +1,3 @@
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class Tennis {
@@ -94,15 +92,12 @@ public class Tennis {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        try {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter the score of your two players with a space in between (ex : 4 0 if you want player 1 to have 40 to love");
             String[] scores = scanner.nextLine().split(" ");
             System.out.println(applyScore(Integer.parseInt(scores[0]), Integer.parseInt(scores[1])));
         } catch (Exception e) {
             System.err.println("You failed !");
-        } finally {
-            scanner.close();
         }
     }
 }

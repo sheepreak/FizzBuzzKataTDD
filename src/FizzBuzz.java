@@ -1,23 +1,32 @@
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
 public class FizzBuzz {
-    private static final String FIZZ = "Fizz";
-    private static final String BUZZ = "Buzz";
 
-    public static String convertFizzBuzz(Integer number) {
-        if (number % 15 == 0) {
-            return FIZZ + BUZZ;
-        } else if (number % 5 == 0) {
-            return BUZZ;
-        } else if (number % 3 == 0) {
+    public static final String FIZZ = "Fizz";
+    public static final String BUZZ = "Buzz";
+    public static final String FIZZ_BUZZ = "FizzBuzz";
+    public static final int FIZZ_DIVIDER = 3;
+    public static final int BUZZ_DIVIDER = 5;
+    public static final int FIZZ_BUZZ_DIVIDER = 15;
+
+    public String convertFizzBuzz(int i) {
+        if (isFizzBuzz(i)) {
+            return FIZZ_BUZZ;
+        } else if (isFizz(i)) {
             return FIZZ;
-        } else {
-            return number.toString();
+        } else if (isBuzz(i)) {
+            return BUZZ;
         }
+        return String.valueOf(i);
     }
 
-    public static void main(String[] args) {
-        System.out.println(IntStream.range(1, 100).mapToObj(FizzBuzz::convertFizzBuzz).collect(Collectors.joining(" ")));
+    private boolean isFizzBuzz(int i) {
+        return i % FIZZ_BUZZ_DIVIDER == 0;
+    }
+
+    private boolean isFizz(int i) {
+        return i % FIZZ_DIVIDER == 0;
+    }
+
+    private boolean isBuzz(int i) {
+        return i % BUZZ_DIVIDER == 0;
     }
 }

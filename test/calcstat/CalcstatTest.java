@@ -8,11 +8,11 @@ import java.util.List;
 public class CalcstatTest {
 
     // Added test data from the summary
-    private List<Integer> sequence = List.of(6, 9, 15, -2, 92, 11);
+    private List<Integer> sequence1 = List.of(6, 9, 15, -2, 92, 11);
 
     @Test
-    void shouldHaveMinusTwoWhenMinimalValue() {
+    void shouldHaveMinusTwoWhenMinimalValueOnSequence1() {
         Calcstat calcstat = new Calcstat();
-        Assertions.assertEquals(-2, calcstats.getMinimalValue(sequence));
+        Assertions.assertEquals(-2, calcstat.getMinimalValue(sequence1));
     }
 }

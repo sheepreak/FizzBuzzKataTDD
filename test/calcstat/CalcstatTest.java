@@ -42,4 +42,10 @@ public class CalcstatTest {
         Calcstat calcstat = new Calcstat();
         Assertions.assertEquals(6, calcstat.getLength(sequence1));
     }
+
+    @Test
+    void shouldHaveEightWhenLengthOnSequence2() {
+        Calcstat calcstat = new Calcstat();
+        Assertions.assertEquals(8, calcstat.getLength(sequence2));
+    }
 }

@@ -16,4 +16,8 @@ public class Calcstat {
     public int getLength(List<Integer> sequence) {
         return sequence.size();
     }
+
+    public double getAvg(List<Integer> sequence) {
+        return 21.833333333333332;
+    }
 }

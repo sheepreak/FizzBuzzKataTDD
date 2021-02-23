@@ -54,4 +54,10 @@ public class CalcstatTest {
         Calcstat calcstat = new Calcstat();
         Assertions.assertEquals(21.833333333333332, calcstat.getAvg(sequence1));
     }
+
+    @Test
+    void shouldHaveTwentyTwoPointEightWhenAvgOnSequence2() {
+        Calcstat calcstat = new Calcstat();
+        Assertions.assertEquals(22.25, calcstat.getAvg(sequence2));
+    }
 }

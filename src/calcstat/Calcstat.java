@@ -10,6 +10,6 @@ public class Calcstat {
     }
 
     public int getMaximalValue(List<Integer> sequence) {
-        return 92;
+        return sequence.stream().max(Integer::compareTo).orElseThrow();
     }
 }

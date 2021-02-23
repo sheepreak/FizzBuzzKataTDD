@@ -30,4 +30,10 @@ public class CalcstatTest {
         Calcstat calcstat = new Calcstat();
         Assertions.assertEquals(92, calcstat.getMaximalValue(sequence1));
     }
+
+    @Test
+    void shouldHaveOneOFiveWhenMaximalValueOnSequence2() {
+        Calcstat calcstat = new Calcstat();
+        Assertions.assertEquals(105, calcstat.getMaximalValue(sequence2));
+    }
 }

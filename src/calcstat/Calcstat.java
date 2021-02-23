@@ -14,6 +14,6 @@ public class Calcstat {
     }
 
     public int getLength(List<Integer> sequence) {
-        return 6;
+        return sequence.size();
     }
 }

@@ -18,6 +18,6 @@ public class Calcstat {
     }
 
     public double getAvg(List<Integer> sequence) {
-        return 21.833333333333332;
+        return sequence.stream().mapToDouble(Integer::doubleValue).average().orElseThrow();
     }
 }

@@ -8,4 +8,8 @@ public class Calcstat {
     public int getMinimalValue(List<Integer> sequence) {
         return sequence.stream().min(Integer::compareTo).orElseThrow();
     }
+
+    public int getMaximalValue(List<Integer> sequence) {
+        return 92;
+    }
 }

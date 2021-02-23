@@ -11,7 +11,7 @@ public class CalcstatTest {
     private List<Integer> sequence1 = List.of(6, 9, 15, -2, 92, 11);
 
     // Added test data from the summary
-    private List<Integer> sequence2 = List.of(6, 9, 15, -5, 105, 11);
+    private List<Integer> sequence2 = List.of(6, 9, 15, -5, 105, 11, 25, 12);
 
     @Test
     void shouldHaveMinusTwoWhenMinimalValueOnSequence1() {
@@ -35,5 +35,11 @@ public class CalcstatTest {
     void shouldHaveOneOFiveWhenMaximalValueOnSequence2() {
         Calcstat calcstat = new Calcstat();
         Assertions.assertEquals(105, calcstat.getMaximalValue(sequence2));
+    }
+
+    @Test
+    void shouldHaveSixWhenLengthOnSequence1() {
+        Calcstat calcstat = new Calcstat();
+        Assertions.assertEquals(6, calcstat.getLength(sequence1));
     }
 }

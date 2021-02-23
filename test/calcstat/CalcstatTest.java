@@ -48,4 +48,10 @@ public class CalcstatTest {
         Calcstat calcstat = new Calcstat();
         Assertions.assertEquals(8, calcstat.getLength(sequence2));
     }
+
+    @Test
+    void shouldHaveTwentyOnePointEightWhenAvgOnSequence1() {
+        Calcstat calcstat = new Calcstat();
+        Assertions.assertEquals(21.833333333333332, calcstat.getAvg(sequence1));
+    }
 }

@@ -24,4 +24,10 @@ public class CalcstatTest {
         Calcstat calcstat = new Calcstat();
         Assertions.assertEquals(-5, calcstat.getMinimalValue(sequence2));
     }
+
+    @Test
+    void shouldHaveNinetyTwoWhenMaximalValueOnSequence1() {
+        Calcstat calcstat = new Calcstat();
+        Assertions.assertEquals(92, calcstat.getMaximalValue(sequence1));
+    }
 }
